@@ -1,0 +1,23 @@
+[
+  {
+    "Id": 1,
+    "Name": "Tacco",
+    "Price": 100.00,
+    "IngredientIDs": [ "ONION", "CAPS", "TOMT", "PNR" ],
+    "Image": "http://localhost:5000/Taco.png"
+  },
+  {
+    "Id": 2,
+    "Name": "Zingy Parcel",
+    "Price": 50.00,
+    "IngredientIDs": [ "ONION", "JLPSUC", "PNR" ],
+    "Image": "http://localhost:5000/zingyparcel.jpg"
+  },
+  {
+    "Id": 3,
+    "Name": "Cheese Dip",
+    "Price": 80.00,
+    "IngredientIDs": [ "CHS" ],
+    "Image": "http://localhost:5000/cheddarcheese-dip.png"
+  }
+]

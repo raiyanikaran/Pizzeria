@@ -1,0 +1,45 @@
+<h2>Menu</h2>
+
+<div class="flex">
+  <div class="card" (click)="openPizzaBuilderDialog()">
+    <div class="card-image">
+      <img src="../assets/new-pizza.png" alt="Buil New Pizza" />
+    </div>
+    <div class="card-body">
+      <h4>Make Your Own delicious Pizza</h4>
+    </div>
+  </div>
+</div>
+  
+<h3>Pizza</h3>
+<div class="flex">
+  <div class="card" *ngFor="let pizza of commonService.allPizzaItems">
+    <div class="card-image">
+      <img [src]='pizza.Image' [alt]="pizza.Name ? pizza.Name : 'Custom Pizza'" />
+    </div>
+    <div class="card-body">
+      <h4>{{pizza.Name ? pizza.Name : 'Custom Pizza'}}</h4>
+      <p class="word-break">{{ pizza.Ingredients | GetName }}</p>
+      <button mat-raised-button color="primary" (click)="openPizzaBuilderDialog(pizza)">Add to cart
+        </button>
+    </div>
+  </div>
+</div>
+
+<h3>Non Pizza Items</h3>
+<div class="flex">
+  <div class="card" *ngFor="let nonPizzaItem of commonService.allNonPizzaItems">
+    <div class="card-image">
+      <img [src]='nonPizzaItem.Image' [alt]="nonPizzaItem.Name" />
+    </div>
+    <div class="card-body">
+      <h4>{{nonPizzaItem.Name}}</h4>
+      <p class="word-break">{{ nonPizzaItem.Ingredients | GetName }}</p>
+      <div class="user">
+        <div class="user-info">
+          <button mat-raised-button color="primary" (click)="addNonPizzaItemToCart(nonPizzaItem)">Add to cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

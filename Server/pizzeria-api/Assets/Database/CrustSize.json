@@ -1,0 +1,17 @@
+[
+  {
+    "Id": "SML",
+    "Name": "Small",
+    "Price": 100.00
+  },
+  {
+    "Id": "MED",
+    "Name": "Medium",
+    "Price": 180.00
+  },
+  {
+    "Id": "LRG",
+    "Name": "Large",
+    "Price": 250.00
+  }
+]

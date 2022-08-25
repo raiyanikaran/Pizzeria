@@ -1,0 +1,22 @@
+[
+  {
+    "Id": "MOZ",
+    "Name": "Mozzarella",
+    "Price": 50.00
+  },
+  {
+    "Id": "CHED",
+    "Name": "Cheddar",
+    "Price": 50.00
+  },
+  {
+    "Id": "MAYO",
+    "Name": "Mayonnaise",
+    "Price": 50.00
+  },
+  {
+    "Id": "EXCHS",
+    "Name": "Extra Cheese",
+    "Price": 60.00
+  }
+]

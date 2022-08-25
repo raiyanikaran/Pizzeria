@@ -1,0 +1,10 @@
+<div class="toolbar" role="banner">
+    <img width="110" alt="Pizza Logo" src="../assets/pizza-logo.png" />
+    <div class="spacer"></div>
+    <select [(ngModel)]="commonService.currentUserId" (ngModelChange)="onSelectUser($event)">
+      <option value="0" disabled>Select User</option>
+        <option *ngFor="let user of commonService.allUsers" [value]="user.Id">{{user.Name}}</option>
+    </select>
+  </div>
+  
+  <div class="content border-bottom" role="main"></div>

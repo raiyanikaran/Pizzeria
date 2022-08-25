@@ -1,0 +1,9 @@
+<app-header></app-header>
+<div class="row d-flex">
+    <div class="column card menu-div" style="width: 60%">
+        <app-menu (openDialog)="openBuildPizzaDialog($event)" (addToCart)="addToCart($event)"></app-menu>
+    </div>
+    <div class="column card cart-div" style="width: 40%">
+        <app-cart></app-cart>
+    </div>
+</div>

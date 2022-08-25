@@ -1,0 +1,62 @@
+[
+  {
+    "Id": 1,
+    "Name": "7 Cheese",
+    "Price": 350.00,
+    "Image": "http://localhost:5000/7-Cheese-Pizza.png",
+    "IngredientIDs": [ "CHS", "JLPN" ],
+    "ToppingIDs": [ "ONION", "CAPS", "TOMT", "PNR", "PEPRN" ],
+    "CheeseIDs": [ "MOZ", "CHED", "MAYO" ],
+    "CrustSauceIDs": [ "CHEESE", "RANCH" ],
+    "SizeId": "MED",
+    "IsExtraCheese": true
+  },
+  {
+    "Id": 2,
+    "Name": "Chilli Paneer",
+    "Price": 450.00,
+    "Image": "http://localhost:5000/chilli-paneer-pizza.png",
+    "IngredientIDs": [ "ONION", "CAPS", "TOMT", "PNR" ],
+    "ToppingIDs": [ "ONION", "CAPS", "TOMT", "PNR", "PEPRN" ],
+    "CheeseIDs": [ "MOZ", "CHED", "MAYO" ],
+    "CrustSauceIDs": [ "CHEESE", "RANCH" ],
+    "SizeId": "LRG",
+    "IsExtraCheese": true
+  },
+  {
+    "Id": 3,
+    "Name": "Sicilian",
+    "Price": 550.00,
+    "Image": "http://localhost:5000/pizza-sicilian.png",
+    "IngredientIDs": [ "MSHRM", "CORN", "TOMT", "PNR" ],
+    "ToppingIDs": [ "ONION", "CAPS", "TOMT", "PNR", "PEPRN" ],
+    "CheeseIDs": [ "MOZ", "CHED", "MAYO" ],
+    "CrustSauceIDs": [ "CHEESE", "RANCH" ],
+    "SizeId": "SML",
+    "IsExtraCheese": true
+  },
+  {
+    "Id": 4,
+    "Name": "Paneer Tikka",
+    "Price": 650.00,
+    "Image": "http://localhost:5000/pizza-tikka.png",
+    "IngredientIDs": [ "ONION", "CAPS", "TOMT", "PNR" ],
+    "ToppingIDs": [ "ONION", "CAPS", "TOMT", "PNR", "PEPRN" ],
+    "CheeseIDs": [ "MOZ", "CHED", "MAYO" ],
+    "CrustSauceIDs": [ "CHEESE", "RANCH" ],
+    "SizeId": "MED",
+    "IsExtraCheese": true
+  },
+  {
+    "Id": 5,
+    "Name": "Paneer Veggie",
+    "Price": 850.00,
+    "Image": "http://localhost:5000/special-paneer-veggie-pizza.png",
+    "IngredientIDs": [ "JLPN", "ONION", "TOMT", "PNR" ],
+    "ToppingIDs": [ "ONION", "CAPS", "TOMT", "PNR", "PEPRN" ],
+    "CheeseIDs": [ "MOZ", "CHED", "MAYO" ],
+    "CrustSauceIDs": [ "CHEESE", "RANCH" ],
+    "SizeId": "LRG",
+    "IsExtraCheese": true
+  }
+]

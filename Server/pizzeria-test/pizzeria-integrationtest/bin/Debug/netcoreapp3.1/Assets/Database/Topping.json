@@ -1,0 +1,57 @@
+[
+  {
+    "Id": "PEPRN",
+    "Name": "Pepperoni",
+    "Price": 50.00
+  },
+  {
+    "Id": "MSHRM",
+    "Name": "Mushrooms",
+    "Price": 50.00
+  },
+  {
+    "Id": "SAUSG",
+    "Name": "Sausage",
+    "Price": 50.00
+  },
+  {
+    "Id": "ONION",
+    "Name": "Onion",
+    "Price": 50.00
+  },
+  {
+    "Id": "PNR",
+    "Name": "Paneer",
+    "Price": 50.00
+  },
+  {
+    "Id": "CAPS",
+    "Name": "Capsicum",
+    "Price": 50.00
+  },
+  {
+    "Id": "CORN",
+    "Name": "Sweet corn",
+    "Price": 60.00
+  },
+  {
+    "Id": "JLPSUC",
+    "Name": "Jalapeño sauce",
+    "Price": 60.00
+  },
+  {
+    "Id": "POT",
+    "Name": "Potato",
+    "Price": 60.00
+  },
+  {
+    "Id": "GAR",
+    "Name": "Garlic",
+    "Price": 60.00
+  },
+  {
+    "Id": "PNRMKH",
+    "Name": "Paneer makhani",
+    "Price": 60.00
+  }
+]

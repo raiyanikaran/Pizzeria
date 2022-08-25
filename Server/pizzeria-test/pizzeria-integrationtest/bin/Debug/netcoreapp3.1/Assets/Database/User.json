@@ -1,0 +1,19 @@
+[
+  {
+    "Id": 1,
+    "Name": "Karan Raiyani",
+    "Email": "raiyanikaran@gmail.com",
+    "PhoneNo": "9558087885",
+    "Address": "Jetpur",
+    "PinCode": "360370"
+  },
+  {
+    "Id": 2,
+    "Name": "Karan Raiyani1",
+    "Email": "raiyanikaran1@gmail.com",
+    "PhoneNo": "9558087885",
+    "Address": "Jetpur",
+    "PinCode": "360370"
+  }
+]
+

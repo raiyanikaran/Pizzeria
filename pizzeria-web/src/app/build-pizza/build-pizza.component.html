@@ -1,0 +1,66 @@
+<h1 mat-dialog-title>Build Your Pizza - {{pizza.Name ? pizza.Name : 'Custom Pizza' }}</h1>
+<div mat-dialog-content>
+  <ul>
+    <li>
+        <div>
+            <h5>Crust Size</h5>
+            <mat-radio-group class="flex-clm" aria-label="Select an option">
+                <mat-radio-button *ngFor="let size of commonService.allCrustSizes" [checked]="pizza.Size?.Id == size.Id" [value]="size.Id" (click)="changeCrustSize(size)">
+                    {{size.Name}} - {{size.Price}}
+                </mat-radio-button>
+            </mat-radio-group>
+        </div>
+    </li>
+    <li>
+        <div>
+            <h5>Crust Sauce</h5>
+            <ul>
+                <li *ngFor="let crustSauce of pizza.CrustSauces">
+                    {{crustSauce.Name}} - {{crustSauce.Price}} 
+                    <input type="checkbox" [checked]="crustSauce.IsAdded" (change)="onChangeOption(crustSauce)">
+                </li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <div>
+            <h5>Ingredients</h5>
+            <ul>
+                <li *ngFor="let ingredient of pizza.Ingredients">
+                    {{ingredient.Name}} - {{ingredient.Price}} 
+                    <input type="checkbox" [checked]="ingredient.IsAdded" (change)="onChangeOption(ingredient)">
+                </li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <div>
+            <h5>Toppings</h5>
+            <ul>
+                <li *ngFor="let topping of pizza.Toppings">
+                    {{topping.Name}} - {{topping.Price}} 
+                    <input type="checkbox" [checked]="topping.IsAdded" (change)="onChangeOption(topping)">
+                </li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <div>
+            <h5>Cheese</h5>
+            <ul>
+                <li *ngFor="let cheese of pizza.Cheeses">
+                    {{cheese.Name}} - {{cheese.Price}} 
+                    <input type="checkbox" [checked]="cheese.IsAdded" (change)="onChangeOption(cheese)">
+                </li>
+            </ul>
+        </div>
+    </li>
+  </ul>
+</div>
+<div mat-dialog-actions>
+  <button mat-button style="background-color: #ffffff1f;" (click)="onClose()">No Thanks</button>
+  <button mat-button style="background-color: #ffffff1f;" (click)="onAddToCart()" cdkFocusInitial>Add To Cart</button>
+  <div class="ml-15">
+    Total - {{pizza.Price}}
+  </div>
+</div>

@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = Pizzeria.IntegrationTest
+build_property.ProjectDir = k:\Practical\Pizzeria\Server\pizzeria-test\pizzeria-integrationtest\

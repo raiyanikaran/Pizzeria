@@ -1,0 +1,85 @@
+<div class="top text_black">
+    <mat-tab-group (selectedTabChange)="tabChange($event)">
+        <!-- Cart-tab -->
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon class="example-tab-icon">add_shopping_cart</mat-icon>
+          </ng-template>
+                <div class="card">
+                    <div class="card-body">
+                        <ul>
+                            <li *ngFor="let item of commonService.cartItems.Pizzas">
+                                <div class="cart-item">
+                                    <ng-container *ngTemplateOutlet="itemCard; context: {$implicit: item}"></ng-container>
+                                </div>
+                            </li>
+                            <li *ngFor="let item of commonService.cartItems.NonPizzaItems">
+                                <div class="cart-item">
+                                    <ng-container *ngTemplateOutlet="itemCard; context: {$implicit: item}"></ng-container>
+                                </div>
+                            </li>
+                            <li>
+                                Grand Total: {{commonService.cartItems.TotalAmmount}}
+                                <button class="btn btn-primary" (click)="placeOrder()">Place order</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+        </mat-tab>
+        <!-- Order-list-tab -->
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon class="example-tab-icon">list</mat-icon>
+          </ng-template>
+            <div class="border">
+                <div class="flex" *ngFor="let orderItem of commonService.allOrders">              
+                    <ng-container>
+                        <div class="card">
+                          <div class="card-body">
+                            <div class="flex flex-clm">
+                                <span class="w100">Order No. #{{orderItem.Id}}</span> 
+                                <span class="w100">Customer Name: {{orderItem.UserName}}</span> 
+                                <span class="w100">Address: {{orderItem.Address}}</span>
+                            </div>
+                            <ul>
+                                <li *ngFor="let item of orderItem.Pizzas">
+                                    <ng-container *ngTemplateOutlet="itemCard; context: {$implicit: item}"></ng-container>
+                                </li>
+                                <li *ngFor="let item of orderItem.NonPizzaItems">
+                                    <ng-container *ngTemplateOutlet="itemCard; context: {$implicit: item}"></ng-container>
+                                    <!-- {{nonPizzaItem.Name}},
+                                    {{nonPizzaItem.Ingredients}},
+                                    {{nonPizzaItem.Price}}<mat-icon class="example-tab-icon">rupee</mat-icon> -->
+                                </li>
+                            </ul>
+                            <span class="w100">Total: {{orderItem.TotalAmmount}}<mat-icon class="example-tab-icon">rupee</mat-icon></span>
+                          </div>
+                        </div>
+                    </ng-container>    
+                </div>
+                <!-- No. #{{orderItem.Id}}
+                Customer Name: {{orderItem.UserName}}
+                Address: {{orderItem.Address}}
+                <ul>
+                    <li *ngFor="let item of orderItem.Pizzas">
+                        <ng-container *ngTemplateOutlet="itemCard; context: {$implicit: item}"></ng-container>
+                    </li>
+                    <li *ngFor="let item of orderItem.NonPizzaItems">
+                        <ng-container *ngTemplateOutlet="itemCard; context: {$implicit: item}"></ng-container>
+                    </li>
+                </ul>
+                Total: {{orderItem.TotalAmmount}}<mat-icon class="example-tab-icon">rupee</mat-icon> -->
+            </div>
+        </mat-tab>
+    
+      </mat-tab-group>
+</div>
+
+<ng-template #itemCard let-item>
+    <div class="border">
+        <h4>{{item.Name}}</h4>
+        <p class="word-break">{{ item.Ingredients | GetName }}</p>
+        <span>{{item.Quantity}} * {{item.Price}} = {{item.Price * item.Quantity}}<mat-icon class="example-tab-icon">rupee</mat-icon></span>
+        <button *ngIf="showRemoveButton" color="warn" (click)="removeCartItem(item)"><mat-icon class="example-tab-icon">delete</mat-icon></button>
+    </div>
+</ng-template>
